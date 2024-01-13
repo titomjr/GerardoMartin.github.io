@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Playfair Display', serif;
+}
+
+.content-grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 10vw repeat(2, 1fr);
+}
+
+nav {
+    background-color: #24252E;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.25rem;
+}
+
+.col {
+    background-color: #D2CAC5;
+    text-align: center;
+}
+
+.col-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #42352E;
+    padding-left: 5rem;
+}
+
+#first-name {
+    position: relative;
+}
+
+#first-name::after {
+    content: '';
+    width: 200px;
+    height: 10px;
+    background-color: slategray;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.name,
+.subheading {
+    margin: 4rem 0;
+    color: black;
+}
+
+.name {
+    font-size: 64px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.subheading {
+    font-size: 28px;
+    width: 75%;
+}
+
+.col-2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.col-2>img {
+    width: 60%;
+    border-radius: 45%;
+}
