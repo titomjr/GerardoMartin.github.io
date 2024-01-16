@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: var(--primary-light);
+    background-color: var(--primary-dark);
     margin: 0;
     box-sizing: border-box;
     overflow-x: hidden;
@@ -17,6 +17,10 @@ body {
 a{
     text-decoration: none;
     color: white;
+}
+
+.container{
+    background-color: var(--primary-light);
 }
 
 /******************************************************
@@ -75,15 +79,33 @@ nav ul li {
     text-align: center;
 }
 
-.home-container div{
-    max-width: 750px;
+.home-container > div{
+    width: 750px;
 }
 
 .name{
-    display: block;
-    text-align: center;
-    margin: auto 0;
     font-size: 35px;
+    position: relative;
+}
+
+.name::before{
+    content: '';
+    background-color: var(--primary-dark);
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    top: -100px;
+    left: 50px;
+}
+
+.name::after {
+    content: '';
+    background-color: var(--primary-dark);
+    height: 120%;
+    width: 50px;
+    position: absolute;
+    top: -50px;
+    right: -50px;
 }
 
 .name h2{
@@ -95,17 +117,28 @@ nav ul li {
     padding-inline: 4vw;
 }
 
+.black-box{
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: clamp(250px, 20vw, 750px);
+    z-index: 0;
+    border-radius: 50%;
+    transform: translate(-10%, -10%);
+}
+
 .portrait-container{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-dark);
-    border-radius: 50%;
 }
 
 .portrait-container>img{
-    width: clamp(200px, 20vw, 750px);
+    width: clamp(250px, 20vw, 750px);
     border-radius: 50%;
+    z-index: 1;
+    box-shadow: -5px -10px 15px 15px rgba(0, 0, 0, 0.5);
 }
 
 #first-name {
@@ -137,10 +170,24 @@ nav ul li {
     padding-block: 20px;
 }
 
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.grid-item {
+    padding-block: 10px;
+}
+
 #record-table {
     width: clamp(250px, 8vw, 500px);
 }
 
+#tito-record-table {
+    width: clamp(350px, 8vw, 500px);
+}
 /******************************************************
 * MEDIA QUERIES
 *******************************************************/
