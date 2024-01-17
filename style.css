@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root{
     --primary-dark: #232638;
     --primary-light: #b6afab;
@@ -77,7 +81,7 @@ nav ul li {
 * HOME
 *******************************************************/
 .home-container{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -102,10 +106,6 @@ nav ul li {
     transition: 0.5s ease-in-out;
 }
 
-.name-container h2:hover{
-    letter-spacing: 5px;
-}
-
 .name-container p{
     margin: 0;
     padding: 5vw 4vw;
@@ -127,7 +127,7 @@ nav ul li {
     width: clamp(250px, 20vw, 750px);
     border-radius: 25%;
     z-index: 1;
-    box-shadow: -5px -10px 15px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
 }
 
 #first-name {
@@ -212,6 +212,10 @@ nav ul li {
     padding-inline: 15%;
 }
 
+#pixy-setup {
+    width: clamp(300px, 8vw, 500px);
+}
+
 /******************************************************
 * MEDIA QUERIES
 *******************************************************/
@@ -239,6 +243,10 @@ nav ul{
 .about-content{
     padding: 75px 0;
     margin: 0;
+}
+
+.projects-container {
+    padding: 75px 0;
 }
 
 }

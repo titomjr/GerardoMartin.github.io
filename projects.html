@@ -26,8 +26,16 @@
         <div class="project-content">
             <div class="project">
                 <h2 id="NASA-tracking">NASA Crew Tracking System</h2>
-                <p>For my senior capstone project, me and 3 others participated in the NASA Texas Space Grant Consortium
-                    and designed a crew tracking system.
+                <p>For my senior capstone project, me and 3 classmates participated in the NASA Texas Space Grant Consortium
+                    design challenge. Our task was to develop a proof-of-concept system that would track
+                    up to 4 individuals inside an area roughly 6 meters in diameter. The purpose of this project is to understand
+                    the psychological and behavioral effects of isolation during long space-flights.
+                </p>
+                <img src="images/pixy_setup.jpg" alt="camera-setup" id="pixy-setup">
+                <p>The system we designed involves multiple Pixy2.1 cameras, each paired with their own ESP32 microcontroller. 
+                    These cameras detect unique colored-patches that the crew members would wear.
+                    Each ESP32 sends raw data from the cameras to a centralized microcontroller, where the data is processed and the final
+                    position and orientation of each crew member is saved onto an SD card.
                 </p>
             </div>
             <div class="project">
