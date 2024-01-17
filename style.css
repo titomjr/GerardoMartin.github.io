@@ -16,11 +16,15 @@ body {
 
 a{
     text-decoration: none;
-    color: white;
 }
 
 .container{
     background-color: var(--primary-light);
+}
+
+.header {
+    margin: 0;
+    padding-inline: 15%;
 }
 
 /******************************************************
@@ -30,7 +34,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #24252E;
+    background-color: var(--primary-dark);
     color: white;
     position: fixed;
     height: 100vh;
@@ -49,6 +53,10 @@ nav ul li {
     text-align: center;
     padding: 2rem 0;
     font-size: 1.25rem;
+}
+
+.nav-link a{
+    color: white;
 }
 
 .nav-link a:hover{
@@ -70,7 +78,6 @@ nav ul li {
 *******************************************************/
 .home-container{
     height: 100vh;
-    overflow: hidden;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -118,7 +125,7 @@ nav ul li {
 
 .portrait-container>img{
     width: clamp(250px, 20vw, 750px);
-    border-radius: 50%;
+    border-radius: 25%;
     z-index: 1;
     box-shadow: -5px -10px 15px 5px rgba(0, 0, 0, 0.5);
 }
@@ -144,6 +151,7 @@ nav ul li {
 .about-content{
     font-size: clamp(24px, 4vw, 28px);
     padding-left: 8vw;
+    min-height: 100vh;
 }
 
 .about-content > *{
@@ -160,9 +168,10 @@ nav ul li {
 }
 
 .grid-item {
-    margin: 0;
-    border: 2px solid rgba(15, 15, 26, 0.432);
+    margin: 25px 5px;
+    border: 1px solid rgba(15, 15, 26, 0.432);
     border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5);
 }
 
 #record-table {
@@ -172,6 +181,37 @@ nav ul li {
 #tito-record-table {
     width: clamp(350px, 8vw, 500px);
 }
+
+#band {
+    width: clamp(400px, 8vw, 500px);
+}
+
+/******************************************************
+* PROJECTS
+*******************************************************/
+.projects-container {
+    margin: 0;
+    padding-block: 25px;
+    padding-inline: 8vw;
+    font-size: clamp(24px, 4vw, 28px);
+    min-height: 100vh;
+}
+
+.project-link-container {
+    padding-block: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 15%;
+}
+
+.project-link-container a{
+    color: #232638;
+}
+
+.project-content {
+    padding-inline: 15%;
+}
+
 /******************************************************
 * MEDIA QUERIES
 *******************************************************/
