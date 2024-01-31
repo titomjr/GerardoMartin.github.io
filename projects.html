@@ -8,15 +8,15 @@
     <title>Gerardo Martin's Projects</title>
 </head>
 <body>
-    <nav>
+    <nav class="side-nav">
         <ul>
-            <li class="nav-link"><a href="index.html"><img src="images/GM-logo-cropped.png" alt="logo" style="width: 75px;"></a></li>
+            <li class="nav-link"><a href="index.html"><img id="logo" src="images/GM-logo-cropped.png" alt="logo"></a></li>
             <li class="nav-link"><a href="about.html">About</a></li>
             <li class="nav-link"><a href="projects.html">Projects</a></li>
             <li class="nav-link"><a>Social Media</a></li>
         </ul>
     </nav>
-    <div class="projects-container container">
+    <div class="projects-container">
         <h1 class="header">Projects</h1>
         <div class="project-link-container">
             <div class="project-link">
@@ -57,15 +57,20 @@
             </div>
             <div class="project">
                 <h2 id="Battery-ML">Remaining Useful Life in batteries with Machine Learning</h2>
-                <p>My final project in my machine learning course involved predicting the remaining useful life in batteries 
-                    using a dataset from NASA. My teammate and I used SVM, Decision Tree, kNN, and ensemble learning as our 
-                    machine learning models. We verified our models with confusion matrices, ROC AUC curves and performance 
-                    parameters such as precision, recall and f1-score. We labeled the dataset based on cycle count for each battery. </p>
+                <p>My final project in my machine learning course involved predicting the RUL in batteries using a dataset from NASA.</p>
             </div>
             <div class="project">
                 <h2 id="PID">PID Controller for a given plant</h2>
-                <p>I designed a PID controller in MATLAB and in a SPICE simulator for a given plant. We were required to meet an overshoot requirement 
-                    as well as an improvement requirement.
+                <p>I designed a PID controller in MATLAB and TopSPICE with a 21.4% 
+                    overshoot and a time-to-peak of 57.1 milliseconds for a plant 
+                    system with poles at 40, 50, and 90 rad/s. The first step was 
+                    verifying the transfer function of the plant system given its poles. 
+                    I produced bode plots for the SPICE schematic and MATLAB and 
+                    compared the magnitudes of both at various frequencies. To eliminate 
+                    any steady-state error, I added an integral channel with a pole 
+                    at the origin and a zero at 10% of the nearest pole. My goal 
+                    with the derivative channel was to decrease the time-to-peak 
+                    by 30%.
                 </p>
             </div>
         </div>

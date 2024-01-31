@@ -35,32 +35,32 @@ a{
 * NAVIGATION
 *******************************************************/
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--primary-dark);
-    color: white;
-    position: fixed;
-    height: 100vh;
-    width: 8vw;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
     z-index: 1;
 }
 
 nav ul {
-    margin: 0;
+    margin: auto;
     padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.719);
 }
 
 nav ul li {
-    color: white;
+    
     list-style: none;
     text-align: center;
     padding: 2rem 0;
-    font-size: 1.25rem;
+    font-size: 2rem;
 }
 
 .nav-link a{
-    color: white;
+    color: rgba(0, 0, 0, 0.719);
 }
 
 .nav-link a:hover{
@@ -77,26 +77,42 @@ nav ul li {
     display: none;
 }
 
+#logo{
+    width: clamp(60px, 75%, 75px);
+    box-shadow: 10px 0px 25px rgba(0, 0, 0, 0.5);
+}
+
 /******************************************************
 * HOME
 *******************************************************/
 .home-container{
-    min-height: 100vh;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
-    padding-left: 8vw;
+    overflow-y: hidden;
+    min-height: 100vh;
     text-align: center;
 }
 
-.home-container > div{
-    width: 750px;
+.background {
+    background-image: url(images/background-photo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.home-content {
+    display: flex;
+    margin: 200px 0;
 }
 
 .name-container{
-    font-size: 35px;
-    position: relative;
+    display: block;
+    margin: auto 0;
+    font-size: 3rem;
+    padding: 0 5vw;
 }
 
 .name-container h2{
@@ -104,17 +120,6 @@ nav ul li {
     font-weight: 600;
     letter-spacing: 2px;
     transition: 0.5s ease-in-out;
-}
-
-.name-container p{
-    margin: 0;
-    padding: 5vw 4vw;
-    font-weight: 400;
-    font-size: clamp(22px, 5vw, 26px);
-}
-
-.name{
-    padding-block: 50px;
 }
 
 .portrait-container{
@@ -125,10 +130,10 @@ nav ul li {
 }
 
 .portrait-container>img{
-    width: clamp(250px, 20vw, 750px);
-    border-radius: 25%;
+    width: clamp(350px, 20vw, 750px);
+    border-radius: 50%;
     z-index: 1;
-    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 0px 25px 15px rgba(0, 0, 0, 0.719);
 }
 
 #first-name {
@@ -149,7 +154,30 @@ nav ul li {
 /******************************************************
 * ABOUT
 *******************************************************/
+.side-nav {
+    position: fixed;
+    height: 100vh;
+    width: 8vw;
+    display: grid;
+    grid-template-columns: min-content;
+    justify-content: center;
+    background-color: var(--primary-dark);
+}
+
+.side-nav ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-nav a {
+    color: white;
+}
+
 .about-content{
+    background-image: url(images/beige-wallpaper.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-size: clamp(24px, 4vw, 28px);
     padding-left: 8vw;
     min-height: 100vh;
@@ -207,6 +235,10 @@ nav ul li {
     padding-inline: 8vw;
     font-size: clamp(24px, 4vw, 28px);
     min-height: 100vh;
+    background-image: url(images/beige-wallpaper.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .project-link-container {
@@ -240,23 +272,49 @@ nav ul li {
 *******************************************************/
 @media (max-width: 1000px){
 nav {
-    width: 100vw;
     height: 75px;
+    background-color: var(--primary-dark);
+    top: 0;
 }
 
 nav ul{
+    height: 75px;
     width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    color: whitesmoke;
 }
 
-.home-container{
-    padding: 0px 50px;
+nav ul li {
+    font-size: 1.5rem;
+    padding: 0;
 }
 
-.name{
+.nav-link a {
+    color: whitesmoke;
+}
+
+.side-nav {
+    width: 100vw;
+    height: 75px;
+}
+
+.side-nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+}
+
+#logo {
+    width: 60px;
+}
+
+.name-container {
     margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
 }
 
 .about-content{
